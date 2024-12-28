@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center">
       <h1 className="text-3xl font-bold underline">
-        Hello World. Template is ready to go.
+        Hello World. Template is ready to go...
       </h1>
     </main>
   );
