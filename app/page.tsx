@@ -7,14 +7,18 @@ import {
   DimoAuthProvider,
 } from "@dimo-network/login-with-dimo";
 import { useState } from "react";
+import dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
 
 export default function Home() {
   const [permissionsEnabled] = useState(true);
 
   // Initialize SDK first
   initializeDimoSDK({
-    clientId: "removed",
-    redirectUri: "http://localhost",
+    clientId: process.env.NEXT_PUBLIC_DIMO_CLIENT_ID!,
+    redirectUri: process.env.NEXT_PUBLIC_DIMO_REDIRECT_URI!,
   });
 
   return (
